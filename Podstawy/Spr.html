@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    
+        <title>   
+            Spr Adam Majkowski
+        </title>
+
+    </head>
+
+    <body>
+        <script>
+            
+            function zad2()
+            {
+                document.write("Nazywam sie Adam Majkowski");
+            }
+           
+            function zad4(number1,number2)
+            {
+                if(number1 > number2)
+                document.write("liczba " + number1 +"jest wieksza");
+                else if (number1 < number2)
+                document.write("liczba " + number2 +" jest wieksza");  
+                else
+                document.write("obie liczby są równe" + number1 + "," + number2);
+            }
+            
+            function zad3( number )
+            {
+                if(number % 2 == 0)
+                document.write("liczba " + number +"jest parzysta");
+                else 
+                document.write("liczba " + number +" nie jest parzysta");  
+            }
+            
+            function zad5()
+            {
+                for(let i = 1; i<=100; i++)
+                {
+                    document.write(i + ",");
+                }
+            }    
+            
+
+            function Time()
+            {
+                var date = new Date();
+                
+                if(date.getHours() <10 ) 
+                    document.write( "0" + date.getHours() + ":");
+                else
+                    document.write( date.getHours()  + ":");
+                if(date.getMinutes() <10 ) 
+                    document.write( "0" + date.getMinutes()  + ":");
+                else 
+                    document.write( date.getMinutes() + ":" );
+                if(date.getSeconds() <10 ) 
+                    document.write( "0" + date.getSeconds()   );
+                else
+                    document.write( date.getSeconds()   );
+            }
+
+            Time();
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    
+        <title>   
+
+        </title>
+
+    </head>
+
+    <body>
+        <script>
+            //obiekt typu string
+            let tekst = "Ala ma kota";
+            let tekst2 = new String("Ala ma kota");
+            document.write("zmienna tekst ma długość " + tekst.length + "<br/>");
+            
+            // jak wyswietlic np. od 7 do 11 znaku bez 11 w string'u, do tego suży metoda substring
+            document.write(tekst.substring(7,11));
+            // zwraca ciag  znaków  na duze litery, przeciwna do niej funkcja to "to.LowerCase"
+            document.write(tekst.toUpperCase() + "<br/");
+            document.write(tekst.toLowerCase() + "<br/");
+
+            //obiekt typu Array - obiekt który przechowuje nam dane w formie tablicy
+
+            let tab1 = [];
+            let tab2 = newArray();
+            tab1[0] = 5;
+            tab1[1] = 1;
+            tab1[2] = 4;
+            // jak wyswietlic tabile
+            for(let i = 0; i<tab1.length; i++)
+            {
+                document.write(tab1[i]+ ",")
+                document.write("<br/>")
+            }
+            // albo, join, który nie potrzebuje pętli by wyswietlic całą tablicę
+            document.write(tab1.join() + "<br/>")
+
+            // obiekt typu Date
+            let data = new Date();
+
+            document.write(data.toString() + "<br/>");
+            document.write("rok" + data.getFullYear() + "<br/>");
+            document.write("dzień tygodnia" + data.getDay() + "<br/>");
+            document.write("Miesiąc" + data.getMonth() + "<br/>");
+            document.write("dzień miesiąca" + data.getDate() + "<br/>");
+            document.write("godzina" + data.getHours() + "<br/>");
+            document.write("minuta" + data.getMinutes() + "<br/>");
+            document.write("sekunda" + data.getSeconds() + "<br/>");
+            document.write("milisekunda" + data.getMiliseconds() + "<br/>");
+            
+
+        </script>
+    </body>
+</html>

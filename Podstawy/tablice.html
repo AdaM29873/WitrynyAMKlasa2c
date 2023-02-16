@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    
+        <title>   
+
+        </title>
+
+    </head>
+
+    <body>
+        <script>
+            let tablicaLicz = [];
+            tablicaLicz[0]= 1;
+            tablicaLicz[1]= 2;
+            tablicaLicz[2]= 3;
+            tablicaLicz[3]= 56;
+            //let to zmienna ktora konczy sie po np petli
+            for(let i = 0; i< 4; i++)
+            {
+                document.write(tablicaLicz[i] + "<br/>");
+            }
+
+            function SzukajMax(paramTab)
+            {
+                let aktMax = paramTab[0];
+
+                for(let i = 0; i < tablicaLicz.length; i++)
+                {
+                  if(aktMax < paramTab[i])
+                  aktMax = paramTab[i];
+                  document.write("najwieksza wartość: " + aktMax);
+                }  
+            }
+            SzukajMax(tablicaLicz);
+            SzukajMax(5);
+            SzukajMax("qwertyuiop");
+            function WyswietlParametry(p1,p2)
+            {
+                document.write(p1 + "<br/>");
+                document.write(p2 + "<br/>");
+            }
+            //WyswietlParametry(15,"Ala");
+            //WyswietlParametry(628);
+            //WyswietlParametry("Ola",14,16);
+            //WyswietlParametry();
+        </script>
+    </body>
+</html>
+
+
