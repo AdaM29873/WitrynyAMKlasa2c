@@ -1,0 +1,76 @@
+
+section
+{
+    display:flex;
+}
+
+body{
+    font-family: garamond;
+}
+#logo
+{
+    background-color: olive;
+    width: 25%;
+    height: 110px;
+    float: right;
+}
+#menu
+{
+    background-color: olive;
+    width:75%;
+    height: 110px;
+    float: left;
+}
+#banner,#footer
+{    
+    background-color: saddlebrown;
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+#banner
+{
+    clear: both;
+}
+#left,#right
+{
+    clear: both;
+    background-color: wheat;
+    width: 50%;
+    height: 450px;
+    font-size: 150%;
+}
+#footer
+{
+    clear: both;
+}
+#left
+{
+    text-align: center;
+    float: left;
+}
+#right
+{
+    float: right;
+}
+h1{
+    letter-spacing: 12px;
+}
+a{
+    color: lightgrey;
+    margin: 30px;
+    font-size: 150%;
+    line-height: 110px;
+    list-style: none;
+}
+a:hover
+{
+    color: white;
+    border-bottom: 1px;
+    border-style: inset;
+    border-color: white;
+}
+#no
+{
+    text-decoration: line-through;
+}

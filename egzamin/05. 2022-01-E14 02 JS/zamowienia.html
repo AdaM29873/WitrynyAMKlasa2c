@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+	<head>
+	<title>Kochamy kawę</title>
+		<link rel="stylesheet" href="styl.css">
+	</head>
+
+	<body>
+        <section>
+            <div id="menu">
+                <a href="index.html">Strona głowna</a>
+                <a href="zamowienia.html">Zamówienia</a>
+                <a href="blog.html">Blog</a>
+                <a href="http://gatunki-kawy.pl">Gatunki kawy</a>
+            </div>
+            <div id="logo">
+                <img src="logo.png" alt="Kawa" >
+            </div>
+        </section>    
+            <div id="banner">
+                <h1>Sklep z kawą</h1>
+            </div>
+        <section>
+            <div id="left">
+                <p>Podaj numer kawy:</p>
+                <input type="number" id="n1">
+                <p>Podaj wagę w dekagramach:</p>
+                <input type="number" id="n2">
+                <button onclick="start()">Zamów</button>
+                <p id="price"></p>
+            </div>
+            <div id="right">
+                <h3>Oferta</h3>
+                <ol>
+                    <li>Arabica</li>
+                    <li>Robusta</li>
+                    <li id="no">bezkofeinowa</li>
+                    <li>zielona</li>
+                </ol>
+            </div>
+        </section>
+            <div id="footer">
+                <p>Stronę przygotował:<b>000000000</b></p>
+            </div>
+      <script>
+        function start()
+        {
+            var first = document.getElementById("n1").value  
+            var second = document.getElementById("n2").value
+            
+            var price = 0;
+            var lastPrice = 0;
+            
+            if(first == 1)
+            {
+                price = 5; 
+            }
+            else if(first == 2)
+            {
+                price = 7; 
+            }
+            else if(first == 4)
+            {
+                price = 5; 
+            }
+            else
+            {
+                price = 0;
+            }
+
+            lastPrice = second * price;
+            document.getElementById("price").innerHTML = ("Koszt zamówienia wynosi:"+lastPrice+"zł");
+        }
+      </script>
+	</body>
+	
+</html>
