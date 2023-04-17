@@ -1,0 +1,88 @@
+<!DOCTYPE html>`
+<html lang="PL-pl">
+<head>
+    <title>Style w JavaScript</title>
+    <link rel="stylesheet" href="styl6.css">
+</head>
+<body>
+    <section>
+        <div id="left">
+            <h1>Konfigurator stylu</h1> <br>
+            <p>Podaj kolor tła</p>
+            <button onclick="ind()" id="Indigo">Indigo</button>
+            <button onclick="ste()"id="SteelBlue">SteelBlue</button>
+            <button onclick="oli()"id="Olive">Olive</button>
+            <p>Podaj kolor czcionki</p>
+            <select onchange="FontColor()" id="color">
+                <option>White</option>
+                <option>Tan</option>
+                <option>Bisque</option>
+                <option>Plum</option>
+            </select>
+            <p>Podaj rozmiar czcionki w procentach,np.200%</p>
+            <input type="text" value="100%" id="fontSize" onchange="Size()">
+            <p>Czy rysunek ma mieć ramkę?</p>
+            <input type="checkbox" checked id="border" onclick="border()">Rysuj ramkę
+            <p>Jaki jest typ punktora listy?</p>
+            <input type="radio" onclick="listOne(1)" checked  value="1"> dysk<br>
+            <input type="radio" onclick="listOne(2)" value="2"> kwadrat<br>
+            <input type="radio"onchange="listOne(3)" value="3"> okrąg
+        </div>
+        <div id="right">
+            <section class="prawo">
+                <img src="gibraltar.jpg" alt="półwysep Gibraltar" id="img">
+                <ul id="list1">
+                    <li>element 1</li>
+                    <li>element 2</li>
+                    <li>element 3</li>
+                </ul>
+            </section>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+    </section>
+    <div id="footer">
+        <p>Autor: 00000000000</p>
+    </div>
+
+    <script>
+        function ind()
+        {
+            document.getElementById("right").style.backgroundColor = "indigo";
+        }
+        function ste()
+        {
+            document.getElementById("right").style.backgroundColor = "steelblue";
+        }
+        function oli()
+        {
+            document.getElementById("right").style.backgroundColor = "olive";
+        }
+        function FontColor()
+        {
+            let color = document.getElementById("color").value;
+            document.getElementById("right").style.color = color;
+        }
+        function Size()
+        {
+            let size = document.getElementById("fontSize").value;
+            document.getElementById("right").style.fontSize = size;
+        }
+        function border()
+        {
+            if(document.getElementById("border").checked)
+                document.getElementById("img").style.border = "1px solid white";
+            else 
+                document.getElementById("img").style.border = "none";
+        }
+        function listOne(value)
+        {
+            if(value == 1)
+                document.getElementById("list1").style.listStyle = "disk";
+            if(value == 2)
+                document.getElementById("list1").style.listStyle = "square";
+            if(value == 3)
+                document.getElementById("list1").style.listStyle = "circle";
+        }
+    </script>
+</body>
+</html> 
